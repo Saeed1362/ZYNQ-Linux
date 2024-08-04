@@ -61,7 +61,7 @@
 
     - You can install PetaLinux wherever you want, but if you want to follow the instructions in UG1144, you can follow the steps below. Before installing it, make sure that your system's "/bin/sh" is Bash rather than Dash.
 
-    	-To check if it is Bash or Dash run the below command:
+    	-> To check if it is Bash or Dash run the below command:
 
             ls -l /bin/sh
             
@@ -69,16 +69,16 @@
             sudo dpkg-reconfigure dash
             You will see a prompt asking, "Install dash as /bin/sh?". Select "No" to change the default shell to bash.
 
-        -Create a directory:
+    -Create a directory:
             mkdir -p \opt\pkg\petalinux\2018.3
 
             if it does not let you create the directory there, you can use chmod 755 for it as below:
 
             chmode 755 mkdir -p \opt\pkg\petalinux\2018.3
 
-        - Download Petalinux release 2018.3 from the AMD website
+    - Download Petalinux release 2018.3 from the AMD website
 
-        - Go to the directory where the Petalinux is located, and get the tool installed by using the below instruction:
+    - Go to the directory where the Petalinux is located, and get the tool installed by using the below instruction:
 
             Warning-> Make sure that you are not installing Petalinux through sudo, otherwise it won't work.
 
@@ -90,3 +90,4 @@
                 * message: ERROR: Access Denied: No access permissions to the directory : /opt/pkg/petalinux/2018.3/
                 * Solution:  chown -R <username>:<username> /opt/pkg/petalinux
          
+# Creating the customized Linux
