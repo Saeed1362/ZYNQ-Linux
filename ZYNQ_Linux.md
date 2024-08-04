@@ -91,3 +91,35 @@
                 * Solution:  chown -R <username>:<username> /opt/pkg/petalinux
          
 # Creating the customized Linux
+
+    - Run the below command to let Petalinux make the environment ready for the commands executions, and its tools in the current shell:
+	
+        source /opt/pkg/petalinux/2018.3/settings.sh
+
+	    Note. You can check through the below command if the commands, aliases and functions are being added:
+
+		    compgen -c ar
+
+    - Create a new project through the below command:
+
+	    petalinux-create --type project --template zynq --name pzynq
+
+	    * type can be: project, ..
+
+	    * template can be: zynq, microblaze, ultraScale
+
+    - Now, you need to create a piece of hardware design in Vivado. Lets imagine that the name of the exported hardware from Vivado is  desgin_1_wrapper_hw_platform_0, so through the below command, you can configure your target Linux based on this hardware:
+
+	petalinux-config --get-hw-description= ../desgin_1_wrapper_hw_platform_0
+
+        Note: Make sure that you have at least activated one UART and one Timer for ZYNQ in Vivado, otherwise, your Linux will not work after completion of tailoring!
+
+    - After finishing the stage number 3 successfully, you need to run the below command to get your Linux get built.
+
+	    petalinux-build
+
+    - When the Linux creation got completed, you need to run the below command to generate Boot.bin
+
+	    petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
+
+# SD card preparation
