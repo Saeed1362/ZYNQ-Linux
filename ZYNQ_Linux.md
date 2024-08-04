@@ -15,3 +15,6 @@
 - 3 [SD card preparation](#SD-card-preparation)
     - Having a quick look at the generated files
     - Copying the necessary files on the SD card and turning the board on
+
+
+# Setting up your environment
