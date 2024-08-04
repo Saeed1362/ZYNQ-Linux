@@ -18,3 +18,27 @@
 
 
 # Setting up your environment
+### System requirements for creating the Linux
+    - Hardware
+      You can use any board equipped with a ZYNQ VLSI that has an Ethernet port, UART port, and SD card capability.
+    - Workstation:
+      8 GB RAM (recommended minimum for Xilinx® tools)
+      2 GHz CPU clock or equivalent (minimum of eight cores)
+      100 GB free HDD space
+      Supported OS:
+      Red Hat Enterprise Workstation/Server 7.4, 7.5, 7.6, 7.7 (64-bit)
+      CentOS Workstation/Server 7.4, 7.5, 7.6, 7.7 (64-bit)
+      Ubuntu Linux Workstation/Server 16.04.5, 16.04.6, 18.04.1, 18.04.2, 18.04.3, 18.04.4 (64-bit)
+
+      ** I have used:
+         Workstation:
+            270 GB HDD space
+            8 GB RAM and
+            Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz   1.99 GHz
+         Software and OS:
+            Ubuntu 16.04.5 LTS
+            Vivado v2018.3
+            Petalinux v2018.3
+         Hardware:
+            Z-turn V2from MYIR
+         
