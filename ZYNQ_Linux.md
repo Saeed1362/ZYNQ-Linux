@@ -21,6 +21,7 @@
 ### System requirements for creating the Linux
     - Hardware
       You can use any board equipped with a ZYNQ VLSI that has an Ethernet port, UART port, and SD card capability.
+
     - Workstation:
       8 GB RAM (recommended minimum for Xilinx® tools)
       2 GHz CPU clock or equivalent (minimum of eight cores)
@@ -35,10 +36,24 @@
             270 GB HDD space
             8 GB RAM and
             Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz   1.99 GHz
+
          Software and OS:
             Ubuntu 16.04.5 LTS
             Vivado v2018.3
             Petalinux v2018.3
+
          Hardware:
             Z-turn V2from MYIR
+
+### Installing pcackes
+
+    - Install the packages listed below. Ensure that you have administrative privileges. After installing the packages, please revert to a non-privileged user.
+
+     Command:
+        apt-get update && sudo apt-get install -y iproute2 gcc g++ net-tools libncurses5-dev zlib1g:i386 libssl-dev flex bison libselinux1 xterm autoconf libtool texinfo zlib1g-dev gcc-multilib build-essential screen pax gawk python3 python3-pexpect python3-pip python3-git python3-jinja2 xz-utils debianutils iputils-ping libegl1-mesa libsdl1.2-dev pylint3 cpio
+
+        Note:
+        * To change to Admin:           user:/$ sudo cu
+        * To change to Normal user:     user:/$ Exit
+        
          
