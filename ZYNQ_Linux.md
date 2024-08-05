@@ -185,6 +185,7 @@ To boot your Linux system, navigate to the path indicated in the image above, an
 
 
 **username:** root
+
 **password:** root
 
 ![Video](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/video/Video.gif)
