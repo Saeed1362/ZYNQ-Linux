@@ -63,7 +63,7 @@ To change to a non-privileged:
 ```
 Exit
 ```
-    
+![Package_installation](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/packages.jpg)
 
 ### Installing Petalinux
 
