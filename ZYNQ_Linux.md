@@ -108,7 +108,10 @@ chown -R <username>:<username> /opt/pkg/petalinux
 ```
 ![Installing_PetaLinux](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installing.jpg)
 
+
+
 If PetaLinux to be installed successfully, you will receive the below message.
+
 ![PetaLinux_Installed](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installed.jpg)
          
 # Creating the customized Linux
@@ -121,9 +124,9 @@ source /opt/pkg/petalinux/2018.3/settings.sh
 ![source_command_execution](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installed.jpg)
 
 Note. You can check through the below command if the commands, aliases and functions are being added.
-'''
+```
 compgen -c ar
-'''
+```
 
 Create a new project through the below command:
 ```
