@@ -101,8 +101,11 @@ Warning-> Make sure that you are not installing Petalinux through sudo, otherwis
 ```
 Note: You may receive a permission error as below that you can get it addressed via the below commands:
 
-Message: ERROR: Access Denied: No access permissions to the directory : /opt/pkg/petalinux/2018.3/
-Solution:  user:/$ chown -R <username>:<username> /opt/pkg/petalinux
+Message -> ERROR: Access Denied: No access permissions to the directory : /opt/pkg/petalinux/2018.3/
+
+```
+chown -R <username>:<username> /opt/pkg/petalinux
+```
          
 # Creating the customized Linux
 
