@@ -106,37 +106,49 @@ Message -> ERROR: Access Denied: No access permissions to the directory : /opt/p
 ```
 chown -R <username>:<username> /opt/pkg/petalinux
 ```
+![Installing_PetaLinux](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installing.jpg)
+
+If PetaLinux to be installed successfully, you will receive the below message.
+![PetaLinux_Installed](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installed.jpg)
          
 # Creating the customized Linux
 
-    - Run the below command to let Petalinux make the environment ready for the commands executions, and its tools in the current shell:
-	
-        user:/$ source /opt/pkg/petalinux/2018.3/settings.sh
+Run the below command to let Petalinux make the environment ready for the commands executions, and its tools in the current shell:
+```
+source /opt/pkg/petalinux/2018.3/settings.sh
+```
 
-	    Note. You can check through the below command if the commands, aliases and functions are being added:
+![source_command_execution](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installed.jpg)
 
-		    user:/$ compgen -c ar
+Note. You can check through the below command if the commands, aliases and functions are being added.
+'''
+compgen -c ar
+'''
 
-    - Create a new project through the below command:
+Create a new project through the below command:
+```
+petalinux-create --type project --template zynq --name pzynq
+```
+-> type can be: project, ..
 
-	    user:/$ petalinux-create --type project --template zynq --name pzynq
+-> template can be: zynq, microblaze, ultraScale
 
-	    * type can be: project, ..
+Now, you need to create a piece of hardware design in Vivado. Lets imagine that the name of the exported hardware from Vivado is  desgin_1_wrapper_hw_platform_0, so through the below command, you can configure your target Linux based on this hardware.
 
-	    * template can be: zynq, microblaze, ultraScale
+```
+petalinux-config --get-hw-description= ../desgin_1_wrapper_hw_platform_0
+```
 
-    - Now, you need to create a piece of hardware design in Vivado. Lets imagine that the name of the exported hardware from Vivado is  desgin_1_wrapper_hw_platform_0, so through the below command, you can configure your target Linux based on this hardware:
+Note: Make sure that you have at least activated one UART and one Timer for ZYNQ in Vivado, otherwise, your Linux will not work after completion of tailoring!
 
-	    user:/$ petalinux-config --get-hw-description= ../desgin_1_wrapper_hw_platform_0
+After finishing the stage number 3 successfully, you need to run the below command to get your Linux get built.
+```
+petalinux-build
+```
 
-        Note: Make sure that you have at least activated one UART and one Timer for ZYNQ in Vivado, otherwise, your Linux will not work after completion of tailoring!
-
-    - After finishing the stage number 3 successfully, you need to run the below command to get your Linux get built.
-
-	    user:/$ petalinux-build
-
-    - When the Linux creation got completed, you need to run the below command to generate Boot.bin
-
-	    user:/$ petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
+When the Linux creation got completed, you need to run the below command to generate Boot.bin
+```
+petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
+```
 
 # SD card preparation
