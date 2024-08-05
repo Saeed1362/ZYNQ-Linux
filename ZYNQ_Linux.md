@@ -162,7 +162,7 @@ petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
 
 ### Having a quick look at the generated files
 
-![File]()
+![File](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/File.jpg)
 **Boot.bin**: It contains FSBL.
 **image.ub**: Kernel image of image.ub contains Linux Kernel, DTB (Device Tree Blob) and RootFS
 **rootfs.bin**: It is the raw image of the RootFS that can be used directly/
@@ -172,7 +172,7 @@ petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
 
 ### Copying the necessary files on the SD card and turning the board on
 
-![Files]()
+![Files](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/Files.jpg)
 To boot your Linux system, navigate to the path indicated in the image above, and copy Boot.bin and image.ub to your SD card. Ensure that the boot pins on your board are configured for the correct memory (in this case, the SD card). Connect the board to a terminal using software like PuTTY and set the baud rate to 115200 bps. Reset the board and let it boot up.
 
 
