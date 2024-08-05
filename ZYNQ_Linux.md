@@ -184,3 +184,7 @@ petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
 To boot your Linux system, navigate to the path indicated in the image above, and copy Boot.bin and image.ub to your SD card. Ensure that the **boot pins** on your board are configured for the correct memory ***(in this case, the SD card)***. Connect the board to a terminal using software like **PuTTY** and set the baud rate to **115200 bps**. Reset the board and let it boot up.
 
 
+**username:** root
+**password:** root
+
+![Video](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/video/Video.gif)
