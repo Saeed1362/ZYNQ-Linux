@@ -53,8 +53,14 @@
         apt-get update && sudo apt-get install -y iproute2 gcc g++ net-tools libncurses5-dev zlib1g:i386 libssl-dev flex bison libselinux1 xterm autoconf libtool texinfo zlib1g-dev gcc-multilib build-essential screen pax gawk python3 python3-pexpect python3-pip python3-git python3-jinja2 xz-utils debianutils iputils-ping libegl1-mesa libsdl1.2-dev pylint3 cpio
 
         Note:
-        * To change to Admin:           user:/$ sudo cu
-        * To change to Normal user:     user:/$ Exit
+        * To change to Admin:           
+            ```
+             sudo cu
+            ```
+        * To change to Normal user:     
+            ```
+             Exit
+            ```
     
 
 ### Installing Petalinux
