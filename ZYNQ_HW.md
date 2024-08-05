@@ -1,4 +1,4 @@
-# Creating a simple design in Vivado to configure the Linux device three based on it
+# Creating a simple design in Vivado to configure the Linux device tree based on it
 
 # Follow the below steps to create it
 
