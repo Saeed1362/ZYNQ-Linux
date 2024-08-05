@@ -94,14 +94,14 @@ Download Petalinux release 2018.3 from the AMD website (https://www.xilinx.com/m
 
 Go to the directory where the Petalinux is located, and get the tool installed by using the below instruction:
 
-Warning-> Make sure that you are not installing Petalinux through sudo, otherwise it won't work.
+***Make sure that you are not installing Petalinux through sudo, otherwise it won't work***
 
 ```
 ./petalinux-v2018.3-final-installer.run /opt/pkg/petalinux/2018.3
 ```
-Note: You may receive a permission error as below that you can get it addressed via the below commands:
+***Note:*** You may receive a permission error as below that you can get it addressed via the below commands:
 
-Message -> ERROR: Access Denied: No access permissions to the directory : /opt/pkg/petalinux/2018.3/
+***Message:*** ERROR: Access Denied: No access permissions to the directory : /opt/pkg/petalinux/2018.3/
 
 ```
 chown -R <username>:<username> /opt/pkg/petalinux
