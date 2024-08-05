@@ -85,7 +85,7 @@ Create a directory:
 mkdir -p \opt\pkg\petalinux\2018.3
 ```
 
-If it does not let you create the directory there, you can use chmod 755 for it as below:
+If it does not let you create the directory there, you can use **chmod 755** for it as below:
 ```
 chmode 755 mkdir -p \opt\pkg\petalinux\2018.3
 ```
@@ -99,7 +99,7 @@ Go to the directory where the Petalinux is located, and get the tool installed b
 ```
 ./petalinux-v2018.3-final-installer.run /opt/pkg/petalinux/2018.3
 ```
-***Note:*** You may receive a permission error as below that you can get it addressed via the below commands:
+***Note.*** You may receive a permission error like the one shown below, which can be addressed using the following commands.
 
 ***Message:*** ERROR: Access Denied: No access permissions to the directory : /opt/pkg/petalinux/2018.3/
 
@@ -110,50 +110,51 @@ chown -R <username>:<username> /opt/pkg/petalinux
 
 
 
-If PetaLinux to be installed successfully, you will receive the below message.
+If PetaLinux is installed successfully, you will receive the message below.
 
 ![PetaLinux_Installed](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installed.jpg)
          
 # Creating the customized Linux
 
-Run the below command to let Petalinux make the environment ready for the commands executions, and its tools in the current shell:
+Run the following command to let PetaLinux set up the environment for command execution and make its tools available in the current shell.
 ```
 source /opt/pkg/petalinux/2018.3/settings.sh
 ```
 
 ![source_command_execution](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installed.jpg)
 
-Note. You can check through the below command if the commands, aliases and functions are being added.
+***Note.*** You can use the command below to check if the commands, aliases, and functions are being added correctly.
 ```
 compgen -c ar
 ```
 
-Create a new project through the below command:
+Create a new project using the command below.
 ```
 petalinux-create --type project --template zynq --name pzynq
 ```
--> type can be: project, ..
+**type** can be: project, app and module. We select **project**.
 
--> template can be: zynq, microblaze, ultraScale
+**template** can be: zynq, zynqMP, microblaze and versal. For this project, we choose **zynq**.
 
-Now, you need to create a piece of hardware design in Vivado. To know how to do it, please go to the below link
+Now, you need to [create a hardware design in Vivado.](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/ZYNQ_HW.md)
 
-https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/ZYNQ_HW.md
 
-Since the name of the exported hardware from Vivado is  desgin_1_wrapper_hw_platform_0, so through the below command, you can configure your target Linux based on this hardware.
+Since the name of the exported hardware from Vivado is **my_design_wrapper_hw_platform_0**, you can configure your target Linux based on this hardware using the command below.
 
 ```
-petalinux-config --get-hw-description= ../desgin_1_wrapper_hw_platform_0
+petalinux-config --get-hw-description= ../my_design_wrapper_hw_platform_0
 ```
 
-Note: Make sure that you have at least activated one UART and one Timer for ZYNQ in Vivado, otherwise, your Linux will not work after completion of tailoring!
+**Note.** **../** points to the location of **my_design_wrapper_hw_platform_0**. Here, it means that it is located in the directory one level above the current one.
 
-After finishing the stage number 3 successfully, you need to run the below command to get your Linux get built.
+**Note.** Make sure that you have at least one **UART** and one **Timer** activated for ZYNQ in Vivado; otherwise, your Linux will not function correctly after tailoring is completed.
+
+After successfully completing stage 3, run the following command to build your Linux system.
 ```
 petalinux-build
 ```
 
-When the Linux creation got completed, you need to run the below command to generate Boot.bin
+When the Linux creation got completed, you need to run the below command to generate **Boot.bin**
 ```
 petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
 ```
