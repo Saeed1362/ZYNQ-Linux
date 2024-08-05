@@ -10,7 +10,6 @@
     - Installing pcackes
     - Installing Petalinux
 - 2 [Creating the customized Linux](#Creating-the-customized-Linux)
-    - Creating a simple piece of hardware in Vivado
     - Creating the Linux
 - 3 [SD card preparation](#SD-card-preparation)
     - Having a quick look at the generated files
@@ -115,7 +114,7 @@ If PetaLinux is installed successfully, you will receive the message below.
 ![PetaLinux_Installed](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/installed.jpg)
          
 # Creating the customized Linux
-
+### Creating the Linux
 Run the following command to let PetaLinux set up the environment for command execution and make its tools available in the current shell.
 ```
 source /opt/pkg/petalinux/2018.3/settings.sh
@@ -145,7 +144,7 @@ Since the name of the exported hardware from Vivado is **my_design_wrapper_hw_pl
 petalinux-config --get-hw-description= ../my_design_wrapper_hw_platform_0
 ```
 
-**Note.** **../** points to the location of **my_design_wrapper_hw_platform_0**. Here, it means that it is located in the directory one level above the current one.
+**Note.** **"../"** points to the location of **my_design_wrapper_hw_platform_0**. Here, it means that it is located in the directory one level above the current one.
 
 **Note.** Make sure that you have at least one **UART** and one **Timer** activated for ZYNQ in Vivado; otherwise, your Linux will not function correctly after tailoring is completed.
 
@@ -160,3 +159,20 @@ petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
 ```
 
 # SD card preparation
+
+### Having a quick look at the generated files
+
+![File]()
+**Boot.bin**: It contains FSBL.
+**image.ub**: Kernel image of image.ub contains Linux Kernel, DTB (Device Tree Blob) and RootFS
+**rootfs.bin**: It is the raw image of the RootFS that can be used directly/
+**rootfs.ex4**: This RootFS is sutable for SD cards, and can be writtend directly to it. 
+**rootfs.ex3**: Older version of .ex4 type.
+**rootfs.jffs2**: This version of RootFS is suitable for FLASH memories like NAND flashes. 
+
+### Copying the necessary files on the SD card and turning the board on
+
+![Files]()
+To boot your Linux system, navigate to the path indicated in the image above, and copy Boot.bin and image.ub to your SD card. Ensure that the boot pins on your board are configured for the correct memory (in this case, the SD card). Connect the board to a terminal using software like PuTTY and set the baud rate to 115200 bps. Reset the board and let it boot up.
+
+
