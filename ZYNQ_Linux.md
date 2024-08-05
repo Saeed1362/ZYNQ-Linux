@@ -162,13 +162,20 @@ petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
 
 ### Having a quick look at the generated files
 
-![File](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/File.jpg)
+![File](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/Files2.jpg)
+
 **Boot.bin**: It contains FSBL.
-**image.ub**: Kernel image of image.ub contains Linux Kernel, DTB (Device Tree Blob) and RootFS
-**rootfs.bin**: It is the raw image of the RootFS that can be used directly/
-**rootfs.ex4**: This RootFS is sutable for SD cards, and can be writtend directly to it. 
-**rootfs.ex3**: Older version of .ex4 type.
-**rootfs.jffs2**: This version of RootFS is suitable for FLASH memories like NAND flashes. 
+
+**image.ub**: Kernel image of image.ub contains Linux Kernel, DTB (Device Tree Blob) and RootFS.
+
+**rootfs.bin**: It is the raw image of the RootFS that can be used directly.
+
+**rootfs.ext4**: This RootFS is suitable for SD cards and can be written directly to it.
+
+**rootfs.ext3**: Older version of .ext4 type.
+
+**rootfs.jffs2**: This version of RootFS is suitable for FLASH memories like NAND flashes.
+
 
 ### Copying the necessary files on the SD card and turning the board on
 
