@@ -136,7 +136,11 @@ petalinux-create --type project --template zynq --name pzynq
 
 -> template can be: zynq, microblaze, ultraScale
 
-Now, you need to create a piece of hardware design in Vivado. Lets imagine that the name of the exported hardware from Vivado is  desgin_1_wrapper_hw_platform_0, so through the below command, you can configure your target Linux based on this hardware.
+Now, you need to create a piece of hardware design in Vivado. To know how to do it, please go to the below link
+
+https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/ZYNQ_HW.md
+
+Since the name of the exported hardware from Vivado is  desgin_1_wrapper_hw_platform_0, so through the below command, you can configure your target Linux based on this hardware.
 
 ```
 petalinux-config --get-hw-description= ../desgin_1_wrapper_hw_platform_0

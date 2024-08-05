@@ -59,3 +59,7 @@ Now from the File menu, click on the SDK option, and let it get opened as below.
 You can see that the design is created successfully in below.
 
 ![SDK_done](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/images/Vivado14.jpg)
+
+
+
+You can comeback to the main page and continue with creating the Linux OS now ..
