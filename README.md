@@ -166,7 +166,7 @@ petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
 
 **Boot.bin**: It contains FSBL.
 
-**image.ub**: Kernel image of image.ub contains Linux Kernel, DTB (Device Tree Blob) and RootFS.
+**image.ub**: Kernel image of image.ub contains Linux Kernel, DTB (Device Tree Binary) and RootFS.
 
 **rootfs.bin**: It is the raw image of the RootFS that can be used directly.
 
