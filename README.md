@@ -166,7 +166,7 @@ petalinux-package --boot --fsbl <FSBL image> --fpga <FPGA bitstream> --uboot
 
 **Boot.bin**: It contains FSBL.
 
-**image.ub**: Kernel image of image.ub contains Linux Kernel, DTB (Device Tree Binary) and RootFS.
+**image.ub**: Kernel image or image.ub contains Linux Kernel, DTB (Device Tree Binary) and RootFS.
 
 **rootfs.bin**: It is the raw image of the RootFS that can be used directly.
 
@@ -189,3 +189,6 @@ To boot your Linux system, navigate to the path indicated in the image above, an
 **password:** root
 
 ![Video](https://github.com/Saeed1362/ZYNQ7000_Linux/blob/main/video/Video.gif)
+
+
+**Note:** The RootFS is in RAM now. This means that if you change anything in RootFS, the changes will be lost after a power cycle. To keep the changes, you need to transfer the RootFS to an SD card, NAND flash, or other non-volatile memories (NVMs).
