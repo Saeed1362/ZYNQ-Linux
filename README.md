@@ -129,7 +129,7 @@ compgen -c ar
 
 Create a new project using the command below.
 ```
-petalinux-create --type project --template zynq --name pzynq
+petalinux-create --type project --template zynq --name myLinux
 ```
 **type** can be: project, app and module. We select **project**.
 
