@@ -14,6 +14,7 @@
 - 3 [SD card preparation](#SD-card-preparation)
     - Having a quick look at the generated files
     - Copying the necessary files on the SD card and turning the board on
+- 4 [Keeping "rootfs", "boot.bin", and "image.ub" separately on an SD card]()
 
 
 # Setting up your environment
@@ -89,7 +90,7 @@ If it does not let you create the directory there, you can use **chmod 755** for
 chmode 755 mkdir -p \opt\pkg\petalinux\2018.3
 ```
 
-Download Petalinux release 2018.3 from the AMD website (https://www.xilinx.com/member/forms/download/xef.html?filename=petalinux-v2018.3-final-installer.run)
+Download Petalinux release 2018.3 from the [AMD website](https://www.xilinx.com/member/forms/download/xef.html?filename=petalinux-v2018.3-final-installer.run)
 
 Go to the directory where the Petalinux is located, and get the tool installed by using the below instruction:
 
