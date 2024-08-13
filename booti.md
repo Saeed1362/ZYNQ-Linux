@@ -4,7 +4,7 @@ There is a header file called **platform-auto.h** located in your project direct
 
 ![directory](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set11.jpg)
 
-![platform-auto](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA4.jpg)
+![platform-auto](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA44.jpg)
 ```
 petalinux-build
 ```
