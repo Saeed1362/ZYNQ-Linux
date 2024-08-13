@@ -15,40 +15,64 @@ As soon as you run the above command, the following screen will open. Please fol
 ![1](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA1.jpg)
 
 
-- 2 ![2](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA2.jpg)
+- 2 
+
+![2](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA2.jpg)
 
 
-- 3 ![3](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA3.jpg)
+- 3 
+
+![3](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA3.jpg)
 
 
-- 4 ![4](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set1.jpg)
+- 4 
+
+![4](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set1.jpg)
 
 
-- 5 ![5](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set2.jpg)
+- 5 
+
+![5](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set2.jpg)
 
 
-- 6 ![6](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set3.jpg)
+- 6 
+
+![6](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set3.jpg)
 
 
-- 7 ![7](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set4.jpg)
+- 7 
+
+![7](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set4.jpg)
 
 
-- 8 ![8](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set5.jpg)
+- 8 
+
+-![8](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set5.jpg)
 
 
-- 9 ![9](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set6.jpg)
+- 9 
+
+![9](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set6.jpg)
 
 
-- 10 ![10](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set7.jpg)
+- 10 
+
+![10](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set7.jpg)
 
 
-- 11 ![11](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set8.jpg)
+- 11 
+
+![11](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set8.jpg)
 
 
-- 12 ![12](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set9.jpg)
+- 12 
+
+![12](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set9.jpg)
 
 
-- 13 ![13](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set10.jpg)
+- 13 
+
+![13](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_set10.jpg)
 
 Once the job reaches this point, you need to run the below commands to get the Linux OS built completely.
 
@@ -77,26 +101,39 @@ sudo gparted
 
 Now follow the steps below to partition your SD card. Note that you will need two partitions: one for storing BOOT.BIN, image.ub, and system.dtb, which should be in FAT32 format and at least 500 MB in size. The second partition should be in ext4 format for storing the rootfs, so you can dedicate the remaining capacity of your SD card to it.
 
+- 1 
 
-- 1 ![G1](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA6.jpg)
-
-
-- 2 ![G2](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA7.jpg)
+![G1](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA6.jpg)
 
 
-- 3 ![G3](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA8.jpg)
+- 2 
+
+![G2](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA7.jpg)
 
 
-- 4 ![G4](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA9.jpg)
+- 3 
+
+![G3](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA8.jpg)
 
 
-- 5 ![G5](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA10.jpg)
+- 4 
+
+![G4](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA9.jpg)
 
 
-- 6 ![G6](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA11.jpg)
+- 5 
+
+![G5](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA10.jpg)
 
 
-- 7 ![G7](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA12.jpg)
+- 6 
+
+![G6](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA11.jpg)
+
+
+- 7 
+
+![G7](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA12.jpg)
 
 After partitioning the SD card, you need to create directories under **/mnt** named BOOT and rootfs, and then mount the relevant partitions on the SD card to these directories. In my case, the SD card is identified as sdb, with partitions sdb1 and sdb2. The device name may differ on your machine, so you can find the correct one using the following command.
 
