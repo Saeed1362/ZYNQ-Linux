@@ -146,7 +146,7 @@ Finally, follow the steps below to create and mount them.
 
 At the end, you can copy the files into the correct partitions as shown below. Note that **rootfs.tar.bz2** is not a single file; it is a compressed archive. Therefore, you need to extract it into the rootfs partition using the tar command, as illustrated in the image.
 
-![copy](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA14.jpg)
+![copy](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA44.jpg)
 
 Now you can insert the SD card and boot Linux. Sometimes, you may encounter a booti error, which prevents the OS from booting completely. The booti command is intended for Zynq UltraScale, but it may not work for Zynq. If you face this issue, refer to the [Fixing Booti Error](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/booti.md) section for a solution.
 
