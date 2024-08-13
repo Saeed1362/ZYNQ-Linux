@@ -10,8 +10,9 @@ petalinux-config --get-hw-description= ../my_design_wrapper_hw_platform_0
 
 As soon as you run the above command, the following screen will open. Please follow the steps shown in the images until you exit the sequence of screens.
 
+- 1 
 
-- 1 ![1](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA1.jpg)
+![1](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA1.jpg)
 
 
 - 2 ![2](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA2.jpg)
