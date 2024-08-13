@@ -15,6 +15,7 @@
     - Having a quick look at the generated files
     - Copying the necessary files on the SD card and turning the board on
 - 4 [Keeping "rootfs", "boot.bin", "system.dtb" and "image.ub" separately on an SD card](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/Separate_rootfs.md)
+- 5 [Fixing Booti Error]()
 
 
 # Setting up your environment
