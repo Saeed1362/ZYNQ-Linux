@@ -148,5 +148,5 @@ At the end, you can copy the files into the correct partitions as shown below. N
 
 ![copy](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/images/Linux_setA14.jpg)
 
-Now you can insert the SD card and boot Linux. Sometimes, you may encounter a booti error, which prevents the OS from booting completely. The booti command is intended for Zynq UltraScale, but it may not work for Zynq. If you face this issue, refer to the **Fixing Booti Error** section for a solution.
+Now you can insert the SD card and boot Linux. Sometimes, you may encounter a booti error, which prevents the OS from booting completely. The booti command is intended for Zynq UltraScale, but it may not work for Zynq. If you face this issue, refer to the [Fixing Booti Error](https://github.com/Saeed1362/ZYNQ-Linux/blob/main/booti.md) section for a solution.
 
